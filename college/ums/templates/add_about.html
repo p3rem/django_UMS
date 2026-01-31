@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add About Us</title>
+</head>
+<body>
+    <ul>
+        <li><a href="about">About Us</a></li>
+        <li><a href="contact">Contact</a></li>
+        <li><a href="index">Index</a></li>
+    </ul>
+    <br>
+    <br>
+    <h1>Add About Us Information</h1>
+    <form action="add_about" method="GET">
+        <input type="text" name="cname" placeholder="College Name" required>
+        <input type="text" name="location" placeholder="Location" required>
+        <input type="number" name="established_year" placeholder="Established Year" required>
+        <textarea name="mission" placeholder="Mission" required></textarea>
+        <textarea name="vision" placeholder="Vision" required></textarea>
+        <input type="submit" value="Add">
+    </form>
+</body>
+</html>

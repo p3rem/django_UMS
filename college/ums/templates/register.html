@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        
+        <li><a href="about">About Us</a></li>  
+        <li><a href="contact">Contact</a></li>
+        <li><a href="index">Index</a></li>
+    </ul>
+    <br>
+    <br>
+    <h1>College Management System</h1>
+
+    <h1>Insert New Student</h1>
+    <form action="student_entry">
+        <input type="text" name="b1" placeholder="Name">
+        <input type="text" name="b2" placeholder="email">
+        <input type="text" name="b3" placeholder="enrollment_date">
+        <input type="text" name="b4" placeholder="dept">
+        <input type="text" name="b5" placeholder="phno">
+        <input type="submit">
+    </form>
+    <a href="about">About us</a>
+    <a href="contact">Contact</a>
+    <a href="index">Index</a>
+    <br>
+
+</body>
+</html>

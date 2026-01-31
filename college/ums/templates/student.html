@@ -1,0 +1,17 @@
+{% load static %}
+<html>
+    <body>
+        <table>
+            <tr><td>Name</td><td>Email</td><td>Enrollment Date</td><td>Department</td><td>Phone no</td></tr>
+            {% for i in u %}
+            <tr>
+                <td>{{ i.name }}</td>
+                <td>{{ i.email }}</td>
+                <td>{{ i.enrollment_date }}</td>
+                <td>{{ i.dept }}</td>
+                <td>{{ i.phno }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

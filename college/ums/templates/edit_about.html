@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit About Us</title>
+</head>
+<body>
+    <ul>
+        <li><a href="{% url 'about' %}">About Us</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+        <li><a href="{% url 'index' %}">Index</a></li>
+    </ul>
+    <br>
+    <br>
+    <h1>Edit About Us Information</h1>
+    <form method="GET" style="display: flex; flex-direction: column; gap: 1rem; max-width: 600px;">
+        <div>
+            <label for="cname">College Name:</label>
+            <input type="text" name="cname" id="cname" value="{{ about.cname }}" placeholder="College Name" style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px;">
+        </div>
+        
+        <div>
+            <label for="location">Location:</label>
+            <input type="text" name="location" id="location" value="{{ about.location }}" placeholder="Location" style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px;">
+        </div>
+        
+        <div>
+            <label for="established_year">Established Year:</label>
+            <input type="number" name="established_year" id="established_year" value="{{ about.established_year }}" placeholder="Established Year" style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px;">
+        </div>
+        
+        <div>
+            <label for="mission">Mission:</label>
+            <textarea name="mission" id="mission" placeholder="Mission" style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px; min-height: 100px;">{{ about.mission }}</textarea>
+        </div>
+        
+        <div>
+            <label for="vision">Vision:</label>
+            <textarea name="vision" id="vision" placeholder="Vision" style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px; min-height: 100px;">{{ about.vision }}</textarea>
+        </div>
+        
+        <div style="display: flex; gap: 1rem;">
+            <input type="submit" value="Update" style="background-color: #4CAF50; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 4px; cursor: pointer;">
+            <a href="{% url 'about' %}" style="background-color: #888; color: white; padding: 0.75rem 1.5rem; border-radius: 4px; text-decoration: none; display: inline-block;">Cancel</a>
+        </div>
+    </form>
+</body>
+</html>
